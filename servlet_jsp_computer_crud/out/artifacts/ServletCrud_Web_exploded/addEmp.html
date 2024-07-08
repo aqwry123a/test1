@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>add Emp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--.Content-Type和Content-Lanauage(显示字符集的设定)-->
+
+    <style>
+/**css样式**/ /**字体样式，Arial黑体字**//**margin外边距，padding内边距**/
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+
+        #sidebar {
+            width: 200px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background-color: #333;
+            padding-top: 20px;
+            color: #fff;
+        }
+/**sidebar左边侧边栏**//**display块级元素默认值为block**//**text-decoration下划线**/
+        #sidebar a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #fff;
+        }
+/**定义鼠标悬浮在链接上时的样式**//**定义鼠标点击链接时的样式**/
+        #sidebar a:hover {
+            background-color: #444;
+        }
+
+        #sidebar a.active {
+            background-color: #16b777;
+        }
+/**定义链接中文字的样式**/
+/**使其具有一定的内边距，居中对齐，具有较大的字体大小、加粗效果，白色文字颜色，深灰色背景，以及底部的浅灰色边框。**/
+        #systemName {
+            padding: 10px 15px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #333;
+            border-bottom: 1px solid #ccc;
+        }
+/**定义内容区域的样式**/
+        #wrap {
+            margin-left: 200px;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+ /**定义表格的样式**/
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table td, .table th {
+            padding: 8px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+ /**定义表格中鼠标悬停时的样式网页浏览时用户鼠标指针的样式或图形形状。pointer：光标为一只手**/
+/**border-radius: 5px;: 这是一个样式规则，设置按钮的边框半径为5像素，使按钮具有圆角效果。**/
+        .button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        /*鼠标悬停时刻样式*/
+        .button:hover {
+            background-color: #45a049;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div id="top_content">
+
+        <div id="content">
+            <p id="whereami">
+            </p>
+            <h1>
+                添加用户
+            </h1>
+            <form action="save" method="post"><!--定义表单定向何处提交表单的地址（URL）（提交页面）方达为po's't-->
+                <table class="table">
+                    <tr>
+                        <td valign="middle" align="right"><!--定义表格单元格中的内容如何垂直对齐以及水平对齐-->
+                            姓名
+                        </td>
+                        <td valign="middle" align="left">
+                            <input type="text" class="inputgri" name="name"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" align="right">
+                            余额
+                        </td>
+                        <td valign="middle" align="left">
+                            <input type="text" class="inputgri" name="salary"/>
+                            <!--class="inputgri"：指定元素的类名为"inputgri"，用于应用特定的样式。-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" align="right">
+                            职位
+                        </td>
+                        <td valign="middle" align="left">
+                            <input type="text" class="inputgri" name="job"/>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    <input type="submit" class="button" value="提交"/>
+                </p>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
